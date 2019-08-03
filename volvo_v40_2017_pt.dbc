@@ -87,6 +87,7 @@ BO_ 880 fromECM1: 8 XXX
 
 BO_ 293 fromServo1: 8 XXX
  SG_ SteeringAngleServo : 47|16@0+ (0.04,-1310.72) [0|65535] "deg" XXX
+ SG_ LKA_Active : 13|1@0+ (1,0) [0|1] "" XXX
 
 BO_ 224 fromServo0: 8 XXX
 
@@ -114,6 +115,7 @@ CM_ SG_ 208 Unkown "Used in checksum calculation";
 CM_ SG_ 208 LKAAngleRequest "+ = right, - = left";
 CM_ SG_ 640 SpeedTarget "SpeedTarget ACC (noisy bf starting acc Jumps from 0->252->0)";
 CM_ SG_ 709 SpeedTargetACC "SpeedTargetACC";
+CM_ SG_ 293 LKA_Active "Seems to be True when steering command is processed.";
 CM_ SG_ 16 ACCOnOffBtn "Cruise control on/off button pressed";
 CM_ SG_ 16 ACCSetBtn "Acc Set button (+) pressed";
 CM_ SG_ 16 ACCMinusBtn "ACC Minus (-) button pressed";
