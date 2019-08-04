@@ -70,6 +70,11 @@ BO_ 208 fromFSMSteeringRequest: 8 XXX
  SG_ LKAAngleRequest : 37|14@0+ (0.04,-327.68) [0|16383] "degrees" XXX
  SG_ Checksum : 48|8@1+ (1,0) [0|255] "" XXX
  SG_ LKADirection : 56|2@1+ (1,0) [0|2] "" XXX
+ SG_ SET_X_E3 : 0|8@1+ (1,0) [0|255] "" XXX
+ SG_ SET_X_B4 : 8|8@1+ (1,0) [0|255] "" XXX
+ SG_ SET_X_08 : 16|8@1+ (1,0) [0|255] "" XXX
+ SG_ SET_X_02 : 39|2@0+ (1,0) [0|3] "" XXX
+ SG_ SET_X_25 : 58|6@1+ (1,0) [0|63] "" XXX
 
 BO_ 352 fromFSM1: 8 XXX
 
