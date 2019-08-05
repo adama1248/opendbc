@@ -84,6 +84,7 @@ BO_ 640 fromFSM3: 8 XXX
  SG_ SpeedTarget : 40|8@1+ (1,0) [0|255] "" XXX
 
 BO_ 853 fromFSM4: 8 XXX
+ SG_ speed_sign_recognition : 32|5@1+ (5,0) [0|15] "" XXX
 
 BO_ 709 fromECM0: 8 XXX
  SG_ SpeedTargetACC : 0|9@0+ (0.5,0) [0|511] "" XXX
@@ -116,6 +117,10 @@ BO_ 245 wheelspeed0: 8 XXX
  SG_ counter0 : 7|16@0+ (1,0) [0|65535] "" XXX
  SG_ counter1 : 23|16@0+ (1,0) [0|65535] "" XXX
 
+BO_ 288 wheel_speed1: 8 XXX
+ SG_ wheel_speed3 : 39|16@0+ (1,0) [0|65535] "" XXX
+ SG_ wheel_speed4 : 55|16@0+ (1,0) [0|65535] "" XXX
+
 
 
 
@@ -130,6 +135,7 @@ CM_ SG_ 208 Checksum "Checksum calculated as a one-complement addition of LKAAng
 CM_ SG_ 208 LKADirection "0 = No lka active, 1=LKA steer right, 2=LKA steer left";
 CM_ SG_ 208 Unkown "Used in checksum calculation";
 CM_ SG_ 640 SpeedTarget "SpeedTarget ACC (noisy bf starting acc Jumps from 0->252->0)";
+CM_ SG_ 853 speed_sign_recognition "Speed sign recognition.";
 CM_ SG_ 709 SpeedTargetACC "SpeedTargetACC";
 CM_ SG_ 293 LKA_Active "Seems to be True when steering command is processed.";
 CM_ SG_ 293 lka_torque "Seems active when doing LKA, might be torque";
