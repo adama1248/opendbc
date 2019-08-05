@@ -69,12 +69,12 @@ BO_ 208 fromFSMSteeringRequest: 8 XXX
  SG_ Unkown : 24|8@1+ (1,0) [0|255] "" XXX
  SG_ LKAAngleRequest : 37|14@0+ (0.04,-327.68) [0|16383] "degrees" XXX
  SG_ Checksum : 48|8@1+ (1,0) [0|255] "" XXX
- SG_ LKADirection : 56|2@1+ (1,0) [0|2] "" XXX
  SG_ SET_X_E3 : 0|8@1+ (1,0) [0|255] "" XXX
  SG_ SET_X_B4 : 8|8@1+ (1,0) [0|255] "" XXX
  SG_ SET_X_08 : 16|8@1+ (1,0) [0|255] "" XXX
  SG_ SET_X_02 : 39|2@0+ (1,0) [0|3] "" XXX
  SG_ SET_X_25 : 58|6@1+ (1,0) [0|63] "" XXX
+ SG_ LKADirection : 56|2@1+ (1,0) [0|2] "" XXX
 
 BO_ 352 fromFSM1: 8 XXX
 
@@ -96,6 +96,10 @@ BO_ 293 fromServo1: 8 XXX
  SG_ some_signal : 11|12@0+ (1,-2000) [0|511] "" XXX
 
 BO_ 224 fromServo0: 8 XXX
+ SG_ counter_07 : 15|3@0+ (1,0) [0|7] "" XXX
+ SG_ NEW_SIGNAL_2 : 8|5@1+ (1,0) [0|31] "" XXX
+ SG_ counter2_07 : 37|3@0+ (1,0) [0|16383] "" XXX
+ SG_ rate_of_something : 40|7@1+ (1,0) [0|62] "" XXX
 
 BO_ 16 CCButtons: 8 XXX
  SG_ ACCOnOffBtn : 58|1@0+ (1,0) [0|1] "" XXX
