@@ -110,6 +110,12 @@ BO_ 16 CCButtons: 8 XXX
  SG_ TimeGapIncreaseBtn : 49|1@0+ (1,0) [0|1] "" XXX
  SG_ TimgeGapDecreaseBtn : 50|1@0+ (1,0) [0|1] "" XXX
 
+BO_ 245 NEW_MSG_1: 8 XXX
+ SG_ wheel_speed_xx0 : 39|16@0+ (1,0) [0|65535] "" XXX
+ SG_ wheel_speed_xx1 : 55|16@0+ (1,0) [0|65535] "" XXX
+ SG_ counter0 : 7|16@0+ (1,0) [0|65535] "" XXX
+ SG_ counter1 : 23|16@0+ (1,0) [0|65535] "" XXX
+
 
 
 
