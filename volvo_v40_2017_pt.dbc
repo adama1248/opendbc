@@ -84,7 +84,7 @@ BO_ 640 fromFSM3: 8 XXX
  SG_ SpeedTarget : 40|8@1+ (1,0) [0|255] "" XXX
 
 BO_ 853 fromFSM4: 8 XXX
- SG_ speed_sign_recognition : 32|5@1+ (5,0) [0|15] "" XXX
+ SG_ speed_sign_recognition : 32|5@1+ (5,0) [0|32] "" XXX
 
 BO_ 709 fromECM0: 8 XXX
  SG_ SpeedTargetACC : 0|9@0+ (0.5,0) [0|511] "" XXX
