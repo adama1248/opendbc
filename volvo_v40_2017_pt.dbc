@@ -37,13 +37,13 @@ BU_: + XXX 0
 
 
 BO_ 85 PedalandBrake: 8 XXX
- SG_ AccPedal : 9|10@0+ (0.1,0) [0|1023] "" XXX
  SG_ BrakePedalActive2 : 24|1@0+ (1,0) [0|1] "" XXX
  SG_ BrakePedalActive : 38|1@0+ (1,0) [0|1] "" XXX
+ SG_ AccPedal : 9|10@0+ (0.1,0) [0|1023] "" XXX
 
 BO_ 8 SteeringAngle: 8 XXX
- SG_ SteeringDirection : 42|1@0+ (1,0) [0|1] "" XXX
  SG_ SteeringAngle1 : 53|14@0+ (0.04,0) [0|65535] "degrees" XXX
+ SG_ SteeringDirection : 42|1@0+ (1,0) [0|1] "" XXX
 
 BO_ 101 EngineInfo: 8 XXX
  SG_ EngineSpeed : 52|13@0+ (1,0) [0|1023] "" XXX
@@ -61,20 +61,22 @@ BO_ 681 MiscCarInfo: 8 XXX
  SG_ HighBeamOn : 52|1@0+ (1,0) [0|1] "" XXX
 
 BO_ 304 VehicleSpeed0: 8 XXX
+ SG_ NEW_SIGNAL_1 : 55|16@0+ (1,0) [0|65535] "" XXX
  SG_ VehicleSpeed : 31|16@0+ (0.01,0) [0|65535] "km/h" XXX
+ SG_ NEW_SIGNAL_2 : 15|16@0+ (1,0) [0|65535] "" XXX
 
 BO_ 48 fromFSM0: 8 XXX
 
 BO_ 208 fromFSMSteeringRequest: 8 XXX
+ SG_ SET_X_E3 : 7|8@0+ (1,0) [0|255] "" XXX
+ SG_ SET_X_B4 : 15|8@0+ (1,0) [0|255] "" XXX
+ SG_ SET_X_08 : 23|8@0+ (1,0) [0|255] "" XXX
  SG_ LKAAngleRequest : 37|14@0+ (0.04,-327.68) [0|16383] "degrees" XXX
- SG_ Checksum : 48|8@1+ (1,0) [0|255] "" XXX
- SG_ SET_X_E3 : 0|8@1+ (1,0) [0|255] "" XXX
- SG_ SET_X_B4 : 8|8@1+ (1,0) [0|255] "" XXX
- SG_ SET_X_08 : 16|8@1+ (1,0) [0|255] "" XXX
+ SG_ Unkown : 31|8@0+ (1,-128) [0|255] "" XXX
  SG_ SET_X_02 : 39|2@0+ (1,0) [0|3] "" XXX
- SG_ SET_X_25 : 58|6@1+ (1,0) [0|63] "" XXX
- SG_ LKADirection : 56|2@1+ (1,0) [0|2] "" XXX
- SG_ Unkown : 24|8@1+ (1,-128) [0|255] "" XXX
+ SG_ Checksum : 55|8@0+ (1,0) [0|255] "" XXX
+ SG_ SET_X_25 : 63|6@0+ (1,0) [0|63] "" XXX
+ SG_ LKADirection : 57|2@0+ (1,0) [0|2] "" XXX
 
 BO_ 352 fromFSM1: 8 XXX
 
@@ -108,9 +110,9 @@ BO_ 16 CCButtons: 8 XXX
  SG_ ACCSetBtn : 63|1@0+ (1,0) [0|1] "" XXX
  SG_ ACCMinusBtn : 48|1@0+ (1,0) [0|1] "" XXX
  SG_ ACCStopBtn : 60|1@0+ (1,0) [0|1] "" XXX
- SG_ ACCResumeBtn : 61|1@0+ (1,0) [0|1] "" XXX
  SG_ TimeGapIncreaseBtn : 49|1@0+ (1,0) [0|1] "" XXX
  SG_ TimgeGapDecreaseBtn : 50|1@0+ (1,0) [0|1] "" XXX
+ SG_ ACCResumeBtn : 61|1@0+ (1,0) [0|1] "" XXX
 
 BO_ 245 wheelspeed0: 8 XXX
  SG_ wheel_speed_xx0 : 39|16@0+ (1,0) [0|65535] "" XXX
@@ -121,6 +123,16 @@ BO_ 245 wheelspeed0: 8 XXX
 BO_ 288 wheel_speed1: 8 XXX
  SG_ wheel_speed3 : 39|16@0+ (1,0) [0|65535] "" XXX
  SG_ wheel_speed4 : 55|16@0+ (1,0) [0|65535] "" XXX
+ SG_ NEW_SIGNAL_1 : 7|16@0+ (1,0) [0|65535] "" XXX
+
+BO_ 1344 NEW_MSG_1: 8 XXX
+ SG_ NEW_SIGNAL_1 : 4|13@0+ (1,0) [0|8191] "" XXX
+
+BO_ 64 NEW_MSG_2: 8 XXX
+ SG_ NEW_SIGNAL_1 : 47|16@0+ (1,0) [0|65535] "" XXX
+
+BO_ 272 SpeedSignal0: 8 XXX
+ SG_ VehicleSpeedSignal : 55|16@0+ (0.01,0) [0|65535] "" XXX
 
 
 
@@ -132,9 +144,9 @@ CM_ SG_ 192 TransmissionGear "0 = 1st gear, 1= 2nd gear... Onlyh activated in ti
 CM_ SG_ 681 TurnSignal "0 = Nothing, 1= Left, 3=Right";
 CM_ SG_ 681 HighBeamOn "1=HighBeam On, 0=HighBeam Off";
 CM_ SG_ 208 LKAAngleRequest "+ = right, - = left";
+CM_ SG_ 208 Unkown "Used in checksum calculation";
 CM_ SG_ 208 Checksum "Checksum calculated as a one-complement addition of LKAAngleRequest+LKADirection+Unkown, Zeros used to pad missing bits.";
 CM_ SG_ 208 LKADirection "0 = No lka active, 1=LKA steer right, 2=LKA steer left";
-CM_ SG_ 208 Unkown "Used in checksum calculation";
 CM_ SG_ 640 SpeedTarget "SpeedTarget ACC (noisy bf starting acc Jumps from 0->252->0)";
 CM_ SG_ 853 speed_sign_recognition "Speed sign recognition.";
 CM_ SG_ 853 text_under_sign "True when sign has additional information";
@@ -145,6 +157,7 @@ CM_ SG_ 16 ACCOnOffBtn "Cruise control on/off button pressed";
 CM_ SG_ 16 ACCSetBtn "Acc Set button (+) pressed";
 CM_ SG_ 16 ACCMinusBtn "ACC Minus (-) button pressed";
 CM_ SG_ 16 ACCStopBtn "ACC Stop button pressed";
-CM_ SG_ 16 ACCResumeBtn "ACC Resume button pressed";
 CM_ SG_ 16 TimeGapIncreaseBtn "Increase the time gap on ACC";
 CM_ SG_ 16 TimgeGapDecreaseBtn "Decrease the time gap on ACC";
+CM_ SG_ 16 ACCResumeBtn "ACC Resume button pressed";
+CM_ SG_ 272 VehicleSpeedSignal "km/h";
