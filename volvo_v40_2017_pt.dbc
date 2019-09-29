@@ -40,6 +40,7 @@ BO_ 85 PedalandBrake: 8 XXX
  SG_ BrakePedalActive2 : 24|1@0+ (1,0) [0|1] "" XXX
  SG_ BrakePedalActive : 38|1@0+ (1,0) [0|1] "" XXX
  SG_ AccPedal : 9|10@0+ (0.1,0) [0|1023] "" XXX
+ SG_ NEW_SIGNAL_1 : 35|12@0- (1,-2054) [0|4095] "" XXX
 
 BO_ 8 SteeringAngle: 8 XXX
  SG_ SteeringAngle1 : 53|14@0+ (0.04,0) [0|65535] "degrees" XXX
@@ -129,10 +130,17 @@ BO_ 1344 NEW_MSG_1: 8 XXX
  SG_ NEW_SIGNAL_1 : 4|13@0+ (1,0) [0|8191] "" XXX
 
 BO_ 64 NEW_MSG_2: 8 XXX
- SG_ NEW_SIGNAL_1 : 47|16@0+ (1,0) [0|65535] "" XXX
 
 BO_ 272 SpeedSignal0: 8 XXX
  SG_ VehicleSpeedSignal : 55|16@0+ (0.01,0) [0|65535] "" XXX
+
+BO_ 432 BrakeMessages: 8 XXX
+ SG_ BrakePress0 : 1|10@0+ (1,0) [0|1023] "" XXX
+ SG_ BrakePress1 : 33|10@0+ (1,0) [0|1023] "" XXX
+
+BO_ 437 NEW_MSG_3: 8 XXX
+ SG_ NEW_SIGNAL_1 : 48|8@1+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_2 : 40|8@1+ (1,0) [0|255] "" XXX
 
 
 
@@ -161,3 +169,5 @@ CM_ SG_ 16 TimeGapIncreaseBtn "Increase the time gap on ACC";
 CM_ SG_ 16 TimgeGapDecreaseBtn "Decrease the time gap on ACC";
 CM_ SG_ 16 ACCResumeBtn "ACC Resume button pressed";
 CM_ SG_ 272 VehicleSpeedSignal "km/h";
+CM_ SG_ 432 BrakePress0 "Brake being pressed";
+CM_ SG_ 432 BrakePress1 "Brake being pressed";
