@@ -48,6 +48,7 @@ BO_ 8 SteeringAngle: 8 XXX
 
 BO_ 101 EngineInfo: 8 XXX
  SG_ EngineSpeed : 52|13@0+ (1,0) [0|1023] "" XXX
+ SG_ NEW_SIGNAL_1 : 17|10@0+ (1,-512) [0|1023] "" XXX
 
 BO_ 336 VehicleSpeed1: 8 XXX
  SG_ VehicleSpeed : 55|16@0+ (0.01,0) [0|2047] "" XXX
@@ -129,7 +130,7 @@ BO_ 288 wheel_speed1: 8 XXX
 BO_ 1344 NEW_MSG_1: 8 XXX
  SG_ NEW_SIGNAL_1 : 4|13@0+ (1,0) [0|8191] "" XXX
 
-BO_ 64 NEW_MSG_2: 8 XXX
+BO_ 64 TransmissionMaybe: 8 XXX
  SG_ RPMSomething : 42|11@0+ (1,0) [0|2047] "" XXX
 
 BO_ 272 SpeedSignal0: 8 XXX
@@ -157,6 +158,7 @@ BO_ 437 NEW_MSG_3: 8 XXX
 CM_ SG_ 85 BrakePedalActive2 "Active during braking";
 CM_ SG_ 85 BrakePedalActive "Brake pedal pushed";
 CM_ SG_ 8 SteeringDirection "1=Right turn, 0=Left turn";
+CM_ SG_ 101 NEW_SIGNAL_1 "Rate of something?";
 CM_ SG_ 192 TransmissionGear "0 = 1st gear, 1= 2nd gear... Onlyh activated in tip-mode";
 CM_ SG_ 681 TurnSignal "0 = Nothing, 1= Left, 3=Right";
 CM_ SG_ 681 HighBeamOn "1=HighBeam On, 0=HighBeam Off";
