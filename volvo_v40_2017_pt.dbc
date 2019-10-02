@@ -138,10 +138,17 @@ BO_ 432 BrakeMessages: 8 XXX
  SG_ BrakePress0 : 1|10@0+ (1,0) [0|1023] "" XXX
  SG_ BrakePress1 : 33|10@0+ (1,0) [0|1023] "" XXX
  SG_ BrakeStatus : 18|3@0+ (1,0) [0|63] "" XXX
+ SG_ NEW_SIGNAL_1 : 24|3@1+ (1,0) [0|7] "" XXX
+ SG_ NEW_SIGNAL_2 : 27|4@1+ (1,0) [0|15] "" XXX
+ SG_ NEW_SIGNAL_3 : 19|5@1+ (1,0) [0|31] "" XXX
+ SG_ NEW_SIGNAL_4 : 2|6@1+ (1,0) [0|63] "" XXX
+ SG_ NEW_SIGNAL_5 : 55|16@0+ (1,0) [0|65535] "" XXX
 
 BO_ 437 NEW_MSG_3: 8 XXX
  SG_ NEW_SIGNAL_1 : 48|8@1+ (1,0) [0|255] "" XXX
  SG_ NEW_SIGNAL_2 : 40|8@1+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_3 : 32|8@1+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_4 : 24|8@1+ (1,0) [0|255] "" XXX
 
 
 
