@@ -68,36 +68,30 @@ BO_ 304 VehicleSpeed0: 8 XXX
  SG_ NEW_SIGNAL_2 : 15|16@0+ (1,0) [0|65535] "" XXX
 
 BO_ 48 fromFSM0: 8 XXX
- SG_ NEW_SIGNAL_1 : 55|4@0+ (1,0) [0|15] "" XXX
+ SG_ NEW_SIGNAL_1 : 25|3@0+ (1,0) [0|3] "" XXX
 
 BO_ 208 fromFSMSteeringRequest: 8 XXX
  SG_ SET_X_E3 : 7|8@0+ (1,0) [0|255] "" XXX
  SG_ SET_X_B4 : 15|8@0+ (1,0) [0|255] "" XXX
  SG_ SET_X_08 : 23|8@0+ (1,0) [0|255] "" XXX
  SG_ LKAAngleRequest : 37|14@0+ (0.04,-327.68) [0|16383] "degrees" XXX
+ SG_ Unkown : 31|8@0+ (1,-128) [0|255] "" XXX
  SG_ SET_X_02 : 39|2@0+ (1,0) [0|3] "" XXX
  SG_ Checksum : 55|8@0+ (1,0) [0|255] "" XXX
  SG_ SET_X_25 : 63|6@0+ (1,0) [0|63] "" XXX
  SG_ LKADirection : 57|2@0+ (1,0) [0|2] "" XXX
- SG_ Unkown : 31|8@0+ (1,-128) [0|255] "" XXX
 
 BO_ 352 fromFSM1: 8 XXX
 
 BO_ 624 fromFSM2: 8 XXX
- SG_ NEW_SIGNAL_1 : 31|8@0+ (1,0) [0|255] "" XXX
- SG_ NEW_SIGNAL_3 : 63|8@0+ (1,0) [0|255] "" XXX
- SG_ NEW_SIGNAL_2 : 23|8@0+ (1,0) [0|255] "" XXX
- SG_ NEW_SIGNAL_4 : 39|8@0+ (1,0) [0|255] "" XXX
 
 BO_ 640 fromFSM3: 8 XXX
- SG_ SpeedTarget : 47|8@0+ (1,0) [0|255] "" XXX
- SG_ NEW_SIGNAL_1 : 56|8@1+ (1,0) [0|255] "" XXX
+ SG_ SpeedTarget : 40|8@1+ (1,0) [0|255] "" XXX
+ SG_ NEW_SIGNAL_1 : 49|10@0+ (1,0) [0|255] "" XXX
 
 BO_ 853 fromFSM4: 8 XXX
  SG_ speed_sign_recognition : 32|5@1+ (5,0) [0|32] "" XXX
  SG_ text_under_sign : 37|1@0+ (1,0) [0|1] "" XXX
- SG_ NEW_SIGNAL_1_lines : 15|4@0+ (1,0) [0|7] "" XXX
- SG_ NEW_SIGNAL_1 : 16|8@1+ (1,0) [0|255] "" XXX
 
 BO_ 709 fromECM0: 8 XXX
  SG_ SpeedTargetACC : 0|9@0+ (0.5,0) [0|511] "" XXX
@@ -170,17 +164,13 @@ CM_ SG_ 101 NEW_SIGNAL_1 "Rate of something?";
 CM_ SG_ 192 TransmissionGear "0 = 1st gear, 1= 2nd gear... Onlyh activated in tip-mode";
 CM_ SG_ 681 TurnSignal "0 = Nothing, 1= Left, 3=Right";
 CM_ SG_ 681 HighBeamOn "1=HighBeam On, 0=HighBeam Off";
-CM_ SG_ 48 NEW_SIGNAL_1 "Could be graphic lane in ODO";
 CM_ SG_ 208 LKAAngleRequest "+ = right, - = left";
+CM_ SG_ 208 Unkown "Used in checksum calculation";
 CM_ SG_ 208 Checksum "Checksum calculated as a one-complement addition of LKAAngleRequest+LKADirection+Unkown, Zeros used to pad missing bits.";
 CM_ SG_ 208 LKADirection "0 = No lka active, 1=LKA steer right, 2=LKA steer left";
-CM_ SG_ 208 Unkown "Used in checksum calculation";
-CM_ SG_ 640 SpeedTarget "SpeedTarget ACC Target vehicle infront? (noisy bf starting acc Jumps from 0->252->0)";
-CM_ SG_ 640 NEW_SIGNAL_1 "Active during ACC";
+CM_ SG_ 640 SpeedTarget "SpeedTarget ACC (noisy bf starting acc Jumps from 0->252->0)";
 CM_ SG_ 853 speed_sign_recognition "Speed sign recognition.";
 CM_ SG_ 853 text_under_sign "True when sign has additional information";
-CM_ SG_ 853 NEW_SIGNAL_1_lines "Maybe lka graphic lines in odometer";
-CM_ SG_ 853 NEW_SIGNAL_1 "Speed of vehicle in front";
 CM_ SG_ 709 SpeedTargetACC "SpeedTargetACC";
 CM_ SG_ 293 LKA_Active "Seems to be True when steering command is processed.";
 CM_ SG_ 293 lka_torque "Seems active when doing LKA, might be torque";
