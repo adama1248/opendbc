@@ -68,7 +68,7 @@ BO_ 304 VehicleSpeed0: 8 XXX
  SG_ NEW_SIGNAL_2 : 15|16@0+ (1,0) [0|65535] "" XXX
 
 BO_ 48 fromFSM0: 8 XXX
- SG_ NEW_SIGNAL_1 : 25|3@0+ (1,0) [0|3] "" XXX
+ SG_ FCWSomething : 25|3@0+ (1,0) [0|3] "" XXX
 
 BO_ 208 fromFSMSteeringRequest: 8 XXX
  SG_ SET_X_E3 : 7|8@0+ (1,0) [0|255] "" XXX
@@ -164,6 +164,7 @@ CM_ SG_ 101 NEW_SIGNAL_1 "Rate of something?";
 CM_ SG_ 192 TransmissionGear "0 = 1st gear, 1= 2nd gear... Onlyh activated in tip-mode";
 CM_ SG_ 681 TurnSignal "0 = Nothing, 1= Left, 3=Right";
 CM_ SG_ 681 HighBeamOn "1=HighBeam On, 0=HighBeam Off";
+CM_ SG_ 48 FCWSomething "All bit set during fcw";
 CM_ SG_ 208 LKAAngleRequest "+ = right, - = left";
 CM_ SG_ 208 Unkown "Used in checksum calculation";
 CM_ SG_ 208 Checksum "Checksum calculated as a one-complement addition of LKAAngleRequest+LKADirection+Unkown, Zeros used to pad missing bits.";
