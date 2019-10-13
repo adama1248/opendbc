@@ -113,6 +113,7 @@ BO_ 224 fromServo0: 8 XXX
  SG_ NEW_SIGNAL_2 : 8|5@1+ (1,0) [0|31] "" XXX
  SG_ counter2_07 : 37|3@0+ (1,0) [0|16383] "" XXX
  SG_ rate_of_something : 40|7@1+ (1,0) [0|62] "" XXX
+ SG_ NEW_SIGNAL_1 : 63|1@0+ (1,0) [0|1] "" XXX
 
 BO_ 16 CCButtons: 8 XXX
  SG_ ACCOnOffBtn : 58|1@0+ (1,0) [0|1] "" XXX
@@ -146,12 +147,12 @@ BO_ 272 SpeedSignal0: 8 XXX
 BO_ 432 BrakeMessages: 8 XXX
  SG_ BrakePress0 : 1|10@0+ (1,0) [0|1023] "" XXX
  SG_ BrakePress1 : 33|10@0+ (1,0) [0|1023] "" XXX
- SG_ BrakeStatus : 18|3@0+ (1,0) [0|63] "" XXX
  SG_ NEW_SIGNAL_1 : 24|3@1+ (1,0) [0|7] "" XXX
  SG_ NEW_SIGNAL_2 : 27|4@1+ (1,0) [0|15] "" XXX
  SG_ NEW_SIGNAL_3 : 19|5@1+ (1,0) [0|31] "" XXX
- SG_ NEW_SIGNAL_4 : 2|6@1+ (1,0) [0|63] "" XXX
  SG_ NEW_SIGNAL_5 : 55|16@0+ (1,0) [0|65535] "" XXX
+ SG_ BrakeStatus : 18|3@0+ (1,0) [0|7] "" XXX
+ SG_ NEW_SIGNAL_4 : 7|6@0+ (1,0) [0|63] "" XXX
 
 BO_ 437 NEW_MSG_3: 8 XXX
  SG_ Counter0 : 24|8@1+ (1,0) [0|255] "" XXX
