@@ -54,6 +54,8 @@ BO_ 101 EngineInfo: 8 XXX
 
 BO_ 336 VehicleSpeed1: 8 XXX
  SG_ VehicleSpeed : 55|16@0+ (0.01,0) [0|2047] "" XXX
+ SG_ NEW_SIGNAL_1 : 15|16@0+ (1,0) [0|65535] "" XXX
+ SG_ NEW_SIGNAL_2 : 31|16@0+ (1,0) [0|65535] "" XXX
 
 BO_ 192 Gear: 8 XXX
  SG_ TransmissionGear : 36|3@0+ (1,1) [0|7] "" XXX
