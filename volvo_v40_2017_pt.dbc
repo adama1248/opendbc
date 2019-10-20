@@ -115,6 +115,7 @@ BO_ 224 fromServo0: 8 XXX
  SG_ counter2_07 : 37|3@0+ (1,0) [0|16383] "" XXX
  SG_ rate_of_something : 40|7@1+ (1,0) [0|62] "" XXX
  SG_ NEW_SIGNAL_1 : 63|1@0+ (1,0) [0|1] "" XXX
+ SG_ OneDuringDriving : 49|1@0+ (1,0) [0|1] "" XXX
 
 BO_ 16 CCButtons: 8 XXX
  SG_ ACCOnOffBtn : 58|1@0+ (1,0) [0|1] "" XXX
@@ -200,6 +201,7 @@ CM_ SG_ 709 SpeedTargetACC "SpeedTargetACC";
 CM_ SG_ 293 LKA_Active "Seems to be True when steering command is processed.";
 CM_ SG_ 293 lka_torque "Seems active when doing LKA, might be torque";
 CM_ SG_ 293 ServoError "Servo set fault?! This bit get one when LKA didnt work and set error in dash.";
+CM_ SG_ 224 OneDuringDriving "turned one after starting to roll";
 CM_ SG_ 16 ACCOnOffBtn "Cruise control on/off button pressed";
 CM_ SG_ 16 ACCSetBtn "Acc Set button (+) pressed";
 CM_ SG_ 16 ACCMinusBtn "ACC Minus (-) button pressed";
